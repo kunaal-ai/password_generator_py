@@ -1,7 +1,6 @@
 import random
 import string
 
-
 class CommonMethods:
     def __init__(self):
         self.lower_character = []
@@ -10,27 +9,30 @@ class CommonMethods:
         self.pun_character = []
 
     def lower_char(self):
+        # Generate lower case characters and return
         for i in string.ascii_lowercase:
             self.lower_character.append(i)
         return self.lower_character
 
     def upper_char(self):
+        # Generate upper case characters and return
         for i in string.ascii_uppercase:
             self.upper_character.append(i)
         return self.upper_character
 
     def list_num(self):
+        # Generate numbers from 0..9 and return
         for i in string.digits:
             self.list_numbers.append(str(i))
         return self.list_numbers
 
     def pun_char(self):
+        # Generate punctuation and return
         for i in string.punctuation:
             self.pun_character.append(str(i))
         return self.pun_character
 
 class AdvancedPasswordGenerator:
-
     obj = CommonMethods()
     password_len = int(input('Password Length ?'))
 
@@ -53,6 +55,5 @@ class AdvancedPasswordGenerator:
     password = "".join(new_pass)
     password = password[0:password_len]
     print(f'Generated Password length is {len(password)} :\n{password}')
-
 
 run_password_generator = AdvancedPasswordGenerator()
